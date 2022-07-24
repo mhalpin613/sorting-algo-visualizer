@@ -1,24 +1,15 @@
-# sorting-algo-visualizer
+### sorting-algo-visualizer
 
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+A simple vue app that aims to visualize some of the 
+common sorting algorithms:
+  ```
+  Bubble Sort
+  Insertion Sort
+  Selection Sort
+  Merge Sort
+  Quick Sort
+  Heap Sort
+  ```
+  
+App is hosted on github pages [here](https://pages.github.com/).
+  
