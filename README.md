@@ -11,5 +11,5 @@ common sorting algorithms:
   Heap Sort
   ```
   
-App is hosted on github pages [here](https://pages.github.com/).
+App is hosted on github pages [here](https://pages.github.com/sorting-algo-visualzer/).
   
