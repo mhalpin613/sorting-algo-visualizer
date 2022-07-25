@@ -1,24 +1,26 @@
 <template>
-  <header>Sorting Algorithm Visualizer</header>
-  <div class="options-container">
-    <div class="dropdown">
-      <button class="dropbtn">Algorithms ></button>
-      <div class="dropdown-content">
-        <a href="#" @click="bubbleSort()">Bubble Sort</a>
-        <a href="#" @click="selectionSort()">Selection Sort</a>
-        <a href="#" @click="insertionSort()">Insertion Sort</a>
-        <a href="#" @click="mergeSort()">Merge Sort</a>
-        <a href="#" @click="quickSort()">Quick Sort</a>
-        <a href="#" @click="heapSort(data)">Heap Sort</a>
+  <body>
+    <header @click="hideMenu()">Sorting Algorithm Visualizer</header>
+    <div class="options-container">
+      <div class="dropdown">
+        <button class="dropbtn">Algorithms></button>
+        <div class="dropdown-content">
+          <a href="#" @click="bubbleSort()">Bubble Sort</a>
+          <a href="#" @click="selectionSort()">Selection Sort</a>
+          <a href="#" @click="insertionSort()">Insertion Sort</a>
+          <a href="#" @click="mergeSort()">Merge Sort</a>
+          <a href="#" @click="quickSort()">Quick Sort</a>
+          <a href="#" @click="heapSort(data)">Heap Sort</a>
+        </div>
+      </div>
+    <button class="shuffle" @click="shuffle()">Shuffle</button>
+    </div>
+    <div class="display-contain">
+      <div class="display-box" @click="hideMenu()">
+        <div class="bar" v-for="(number, index) in this.data" :key="index" :style="{height: number + 'px', backgroundColor: 'limegreen'}"></div>
       </div>
     </div>
-  <button class="shuffle" @click="shuffle()">Shuffle</button>
-  </div>
-  <div class="display-contain">
-    <div class="display-box">
-      <div class="bar" v-for="(number, index) in this.data" :key="index" :style="{height: number + 'px', backgroundColor: 'limegreen'}"></div>
-    </div>
-  </div>
+  </body>
 </template>
 
 <script>
@@ -34,6 +36,10 @@ export default {
   components: {
   },
   methods: {
+
+    hideMenu() {
+      document.getElementsByClassName("dropdown-content")[0].style.display = "none";
+    },
     
     shuffle() {
       this.data = [];
@@ -270,7 +276,7 @@ export default {
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Edu+SA+Beginner:wght@500&family=Press+Start+2P&display=swap');
 
-body{ 
+body { 
   margin: 0; 
   font-family: 'Press Start 2P','tahoma';
   background-color: black;
@@ -346,6 +352,7 @@ header {
 .shuffle {
   width: 15vw;
   max-width: 150px;
+  min-width: 150px;
   border-radius: 10px;
   border: none;
   font-size: small;
@@ -386,6 +393,12 @@ header {
   background-color: limegreen;
   margin-right: 2px;
   border-radius: 50px;
+}
+
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) { 
+  .display-box {
+    translate: (-75px, 0);
+  }
 }
 
 </style>
