@@ -405,4 +405,11 @@ header {
   }
 }
 
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px)  { 
+  body {
+    overflow: auto;
+  }
+}
+
+
 </style>
