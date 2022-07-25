@@ -3,7 +3,7 @@
     <header @click="hideMenu()">Sorting Algorithm Visualizer</header>
     <div class="options-container">
       <div class="dropdown">
-        <button class="dropbtn">Algorithms></button>
+        <button class="dropbtn" @click="showMenu()">Algorithms></button>
         <div class="dropdown-content">
           <a href="#" @click="bubbleSort()">Bubble Sort</a>
           <a href="#" @click="selectionSort()">Selection Sort</a>
@@ -39,6 +39,10 @@ export default {
 
     hideMenu() {
       document.getElementsByClassName("dropdown-content")[0].style.display = "none";
+    },
+
+    showMenu() {
+      document.getElementsByClassName("dropdown-content")[0].style.display = "block";
     },
     
     shuffle() {
